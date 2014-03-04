@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>[,c = 2] Letter Count -</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Letter count,word count,character count,alphabet count"/>
+    <meta name="author" content="tsg"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <!--$(function(){prettyPrint();}); script type='text/javascript' src='/static/js/prettify/prettify.js'></script-->
+	<!--link rel='stylesheet' type='text/css' href='/static/js/prettify/prettify.css' /-->
+	<script src="jquery-2.0.3.min.js"></script>
+	<script src="jquery.simplyCountable.js"></script>
+	<script type='text/javascript'>
+			$(document).ready(function()
+			{
+		  		$('#content').simplyCountable({
+		    		counter: '#CountCharacters',
+        			countType: 'characters',
+        			countDirection: 'up'
+		  		});
+		  		
+		  		$('#content').simplyCountable({
+		    		counter: '#CountWord',
+        			countType: 'words',
+        			countDirection: 'up'
+		  		});
+		  		
+		  		$('#content').simplyCountable({
+		    		counter: '#CountCharactersWithoutSpace',
+        			countType: 'CharactersWithoutSpace',
+        			countDirection: 'up'
+		  		});
+		  		
+		  		 $("#ClearCharacters").click(function () {
+                     $("#content").val("");
+                  });
+           
+
+			});
+		
+	</script>
+				<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+				<style type='text/css'>
+				body {
+  						font-family: 'Source Sans Pro', sans-serif;
+  						color: #33332d;
+  					}
+				
+				.red { color: #db4105 }
+				.blue { color: #9fb4cc }
+				.beige { color: #b7b7ae }
+				
+				.box { padding : 8px 8px 8px 14px ; border : 1px solid #fbeed5;  Background-color: #fbeed5; }
+				
+				.sitehead{text-align: center;}
+				.center{ text-align: center; margin-top: 5%; }
+				.input-clarge{width:600px; height:400px;}
+
+				.prettyprint{ text-align: left; width: 70%; margin: 0 auto;}
+				
+				
+				
+				</style>
+    
+</head>
+<body>   
+	<div class="container"> 
+		<div class="header sitehead">
+			   <h1>Letter Count</h1>  
+         </div>
+         <hr/>
+         <div class="container-fluid">
+         	<div class="row-fluid">
+         	 	  <div class="span4">
+         	 	  	<h2> <span id="CountCharacters" class="blue"> </span> </h2><h4> Letters </h4>
+            		<h2> <span id="CountCharactersWithoutSpace" class="blue"> </span> </h2> <h4> Letters without space </h4>
+            		<h2> <span id="CountWord" class="blue"> </span> </h2> <h4> Words </h4>
+         	 	  </div>
+  				  <div class="span8 input-prepend"><span id="ClearCharacters" class="btn btn-danger">Clear</span><textarea class="input-clarge row-fluid" id="content"></textarea></div>
+         	</div>
+         </div>
+         <div>
+         <footer>
+        	<p style ="valign: bottom">&copy;Letter Count-india's first letter online calculator 2008-2013
+        	
+        	<a href="http://www.w3.org/html/logo/">
+<img style="float: right" src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+</a>
+        	</p>
+      	</footer>
+         </div>
+    </div>
+</body>
+</html>
